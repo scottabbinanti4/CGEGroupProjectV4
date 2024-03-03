@@ -2887,11 +2887,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6543704979815986093, guid: ade301d7d7b602b4387c48d167510115, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.082489
+      value: 36.88249
       objectReference: {fileID: 0}
     - target: {fileID: 6543704979815986093, guid: ade301d7d7b602b4387c48d167510115, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1451006
+      value: 7.945101
       objectReference: {fileID: 0}
     - target: {fileID: 6543704979815986093, guid: ade301d7d7b602b4387c48d167510115, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5736,6 +5736,10 @@ PrefabInstance:
       propertyPath: output
       value: 
       objectReference: {fileID: 889296019}
+    - target: {fileID: 331799196301194596, guid: 47c850eb767614f43b7a147a6da393f0, type: 3}
+      propertyPath: textToDisplay
+      value: You Lose! Press R To try again!
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47c850eb767614f43b7a147a6da393f0, type: 3}
 --- !u!1001 &6543704979731618538
@@ -5771,11 +5775,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6543704979815986093, guid: ade301d7d7b602b4387c48d167510115, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.8
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 6543704979815986093, guid: ade301d7d7b602b4387c48d167510115, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 8.3
       objectReference: {fileID: 0}
     - target: {fileID: 6543704979815986093, guid: ade301d7d7b602b4387c48d167510115, type: 3}
       propertyPath: m_LocalPosition.z
