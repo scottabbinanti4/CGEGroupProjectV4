@@ -25,7 +25,7 @@ public class ScoreManager : MonoBehaviour
     {
         if (!gameOver)
         {
-            textbox.text = "Score: " + score;
+            //textbox.text = "Score: " + score;
         }
 
         if (score >= 3) 
