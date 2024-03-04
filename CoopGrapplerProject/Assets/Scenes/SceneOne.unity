@@ -1521,6 +1521,10 @@ PrefabInstance:
       propertyPath: m_Parameters.colorGradient.key1.r
       value: 0.9098039
       objectReference: {fileID: 0}
+    - target: {fileID: 739217164534508915, guid: ade301d7d7b602b4387c48d167510115, type: 3}
+      propertyPath: m_Distance
+      value: 14.690809
+      objectReference: {fileID: 0}
     - target: {fileID: 739217164534508916, guid: ade301d7d7b602b4387c48d167510115, type: 3}
       propertyPath: pullForce
       value: 30
@@ -1774,7 +1778,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 18.392216
+  orthographic size: 17.532326
   m_Depth: 2.43
   m_CullingMask:
     serializedVersion: 2
