@@ -11,6 +11,7 @@ public class ScoreManager : MonoBehaviour
     public static int score;
 
     public TMP_Text textbox;
+    public int scoreToWin;
 
     // Start is called before the first frame update
     private void Start()
@@ -23,31 +24,26 @@ public class ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!gameOver)
-        {
-            //textbox.text = "Score: " + score;
-        }
-
-        if (score >= 3) 
+        if (score >= scoreToWin)
         {
             won = true;
             gameOver = true;
         }
-        if (gameOver)
+
+        if(gameOver)
         {
-            if (won)
+            if(won)
             {
-                textbox.text = "You Win!\nPress R to Try Again!";
+                textbox.text = "You win!\nPress R to Try Again";
             }
             else
             {
-                textbox.text = "You Lose!\nPress R to Try Again!";
+                textbox.text = "You Lose!\nPress R to Try Again";
             }
-            if (Input.GetKeyDown(KeyCode.R)) 
-            { 
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
-
         }
     }
 }
