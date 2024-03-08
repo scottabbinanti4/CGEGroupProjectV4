@@ -8,16 +8,19 @@ public class ScoreManager : MonoBehaviour
 {
     public static bool gameOver;
     public static bool won;
+    
     public static int score;
 
     public TMP_Text textbox;
     public int scoreToWin;
+    
 
     // Start is called before the first frame update
     private void Start()
     {
         gameOver = false;
         won = false;
+        
         score = 0;
     }
 
@@ -27,10 +30,13 @@ public class ScoreManager : MonoBehaviour
         if (score >= scoreToWin)
         {
             won = true;
+            
             gameOver = true;
         }
 
-        if(gameOver)
+        
+
+        if (gameOver)
         {
             if(won)
             {
