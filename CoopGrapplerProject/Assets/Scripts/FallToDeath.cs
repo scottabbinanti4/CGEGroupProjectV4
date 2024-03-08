@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.SceneManagement;
 
 public class FallToDeath : MonoBehaviour
 {
@@ -15,6 +14,7 @@ public class FallToDeath : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             output.text = textToDisplay;
+            ScoreManager.gameOver = true;
         }
     }
 }
