@@ -1263,11 +1263,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 739217164534508915, guid: ade301d7d7b602b4387c48d167510115, type: 3}
       propertyPath: m_Distance
-      value: 14.690809
+      value: 6.354432
       objectReference: {fileID: 0}
     - target: {fileID: 739217164534508916, guid: ade301d7d7b602b4387c48d167510115, type: 3}
       propertyPath: pullForce
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 739217164534508916, guid: ade301d7d7b602b4387c48d167510115, type: 3}
       propertyPath: grappleForce
@@ -1292,6 +1292,18 @@ PrefabInstance:
     - target: {fileID: 739217164534508916, guid: ade301d7d7b602b4387c48d167510115, type: 3}
       propertyPath: player2GrappleKey
       value: 102
+      objectReference: {fileID: 0}
+    - target: {fileID: 739217164534508918, guid: ade301d7d7b602b4387c48d167510115, type: 3}
+      propertyPath: m_GravityScale
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 739217164534508919, guid: ade301d7d7b602b4387c48d167510115, type: 3}
+      propertyPath: jumpForce
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 739217164534508919, guid: ade301d7d7b602b4387c48d167510115, type: 3}
+      propertyPath: moveSpeed
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 739217164534508920, guid: ade301d7d7b602b4387c48d167510115, type: 3}
       propertyPath: m_RootOrder
@@ -1652,7 +1664,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 17.532326
+  orthographic size: 25.601095
   m_Depth: 2.43
   m_CullingMask:
     serializedVersion: 2
@@ -3237,9 +3249,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2312097688105133234, guid: ccb65d1cdb696d0498b7fc5f48df8ebc, type: 3}
+      propertyPath: m_Distance
+      value: 8.54282
+      objectReference: {fileID: 0}
     - target: {fileID: 2312097688105133237, guid: ccb65d1cdb696d0498b7fc5f48df8ebc, type: 3}
       propertyPath: pullForce
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2312097688105133237, guid: ccb65d1cdb696d0498b7fc5f48df8ebc, type: 3}
       propertyPath: grappleLength
@@ -3252,6 +3268,18 @@ PrefabInstance:
     - target: {fileID: 2312097688105133237, guid: ccb65d1cdb696d0498b7fc5f48df8ebc, type: 3}
       propertyPath: player1GrappleKey
       value: 305
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312097688105133238, guid: ccb65d1cdb696d0498b7fc5f48df8ebc, type: 3}
+      propertyPath: jumpForce
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312097688105133238, guid: ccb65d1cdb696d0498b7fc5f48df8ebc, type: 3}
+      propertyPath: moveSpeed
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312097688105133239, guid: ccb65d1cdb696d0498b7fc5f48df8ebc, type: 3}
+      propertyPath: m_GravityScale
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 2312097688105133240, guid: ccb65d1cdb696d0498b7fc5f48df8ebc, type: 3}
       propertyPath: m_Color.b

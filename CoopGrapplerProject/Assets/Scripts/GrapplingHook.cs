@@ -7,7 +7,7 @@ public class GrapplingHook : MonoBehaviour
     [SerializeField] private float grappleLength;
     [SerializeField] private LayerMask grappleLayer; // Layer mask for the environment
     [SerializeField] private LineRenderer rope;
-    [SerializeField] private float pullForce = 10f; // Adjust the pull force as needed
+    [SerializeField] private float verticalBoostForce = 10f; // Adjust the boost force as needed
     private DistanceJoint2D joint;
 
     // Use this angle for the base grapple direction
@@ -15,7 +15,6 @@ public class GrapplingHook : MonoBehaviour
 
     // Input key for player
     [SerializeField] private KeyCode playerGrappleKey = KeyCode.F;
-
 
     void Start()
     {
@@ -38,7 +37,7 @@ public class GrapplingHook : MonoBehaviour
 
             // Cast a ray in the grapple direction
             RaycastHit2D hit = Physics2D.Raycast(transform.position, grappleDirection, grappleLength, grappleLayer);
-            
+
             // If the ray hits something, set the grapple point to the point of collision
             if (hit.collider != null)
             {
@@ -51,7 +50,7 @@ public class GrapplingHook : MonoBehaviour
 
                 // Apply an initial force to get the player moving towards the grapple point
                 Rigidbody2D rb = GetComponent<Rigidbody2D>();
-                rb.AddForce((hit.point - (Vector2)transform.position).normalized * pullForce, ForceMode2D.Impulse);
+                rb.AddForce((hit.point - (Vector2)transform.position).normalized * verticalBoostForce, ForceMode2D.Impulse);
             }
             else
             {
@@ -71,13 +70,10 @@ public class GrapplingHook : MonoBehaviour
         {
             joint.enabled = false;
             rope.enabled = false;
-        }
 
-        if (joint.enabled)
-        {
-            // Continuously apply a pulling force towards the grapple point
+            // Apply a vertical boost after releasing the grapple
             Rigidbody2D rb = GetComponent<Rigidbody2D>();
-            rb.AddForce((joint.connectedAnchor - (Vector2)transform.position).normalized * pullForce);
+            rb.AddForce(Vector2.up * verticalBoostForce, ForceMode2D.Impulse);
         }
 
         if (rope.enabled == true)
