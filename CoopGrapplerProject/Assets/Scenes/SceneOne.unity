@@ -2017,7 +2017,7 @@ MonoBehaviour:
   - Hello and welcome to Swing, Swang, Swung!
   - To move your characters player 1 will use WASD and player 2 will use the arrow
     keys.
-  - To use the grappling hook, press and use the 'F' key or the right 'CTR' key.
+  - To use the grappling hook, press and use the 'F' key or the 'M' key.
   - Use these to avoid obstacles and use teamwork to reach the end!
   - Good Luck!
   typingSpeed: 0.02
@@ -3360,7 +3360,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2312097688105133237, guid: ccb65d1cdb696d0498b7fc5f48df8ebc, type: 3}
       propertyPath: playerGrappleKey
-      value: 305
+      value: 109
       objectReference: {fileID: 0}
     - target: {fileID: 2312097688105133237, guid: ccb65d1cdb696d0498b7fc5f48df8ebc, type: 3}
       propertyPath: player1GrappleKey
