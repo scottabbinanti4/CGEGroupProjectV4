@@ -16,17 +16,13 @@ public class ButtonBehavior : MonoBehaviour
     {
         
     }
-    public void OnCollisionEnter2D(Collision2D other)
+    public void OnCollisionStay2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player")) 
         {
             door.SetActive(false);
         }
 
-        else
-        {
-            door.SetActive(true);
-        }
     }
 
     private void OnCollisionExit2D(Collision2D other)
