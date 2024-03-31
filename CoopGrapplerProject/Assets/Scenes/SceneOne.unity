@@ -1275,7 +1275,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 739217164534508916, guid: ade301d7d7b602b4387c48d167510115, type: 3}
       propertyPath: grappleLength
-      value: 30
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 739217164534508916, guid: ade301d7d7b602b4387c48d167510115, type: 3}
       propertyPath: grapplePullForce
@@ -3351,12 +3351,16 @@ PrefabInstance:
       value: 8.54282
       objectReference: {fileID: 0}
     - target: {fileID: 2312097688105133237, guid: ccb65d1cdb696d0498b7fc5f48df8ebc, type: 3}
+      propertyPath: playerKey
+      value: Player2Horizontal
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312097688105133237, guid: ccb65d1cdb696d0498b7fc5f48df8ebc, type: 3}
       propertyPath: pullForce
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2312097688105133237, guid: ccb65d1cdb696d0498b7fc5f48df8ebc, type: 3}
       propertyPath: grappleLength
-      value: 30
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2312097688105133237, guid: ccb65d1cdb696d0498b7fc5f48df8ebc, type: 3}
       propertyPath: playerGrappleKey

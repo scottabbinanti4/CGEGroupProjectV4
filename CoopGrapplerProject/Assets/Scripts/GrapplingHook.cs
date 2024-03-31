@@ -15,6 +15,7 @@ public class GrapplingHook : MonoBehaviour
 
     // Input key for player
     [SerializeField] private KeyCode playerGrappleKey = KeyCode.F;
+    [SerializeField] private string playerKey = "Player1Horizontal";
 
     void Start()
     {
@@ -29,11 +30,13 @@ public class GrapplingHook : MonoBehaviour
         if (Input.GetKeyDown(playerGrappleKey))
         {
             // Check the player's movement direction
-            float horizontalInput = Input.GetAxis("Horizontal");
-            int direction = Mathf.RoundToInt(Mathf.Sign(horizontalInput));
+            float horizontalInput = Input.GetAxis(playerKey);
+
+            // Set the base grapple angle based on the player's input
+            float baseGrappleAngle = Mathf.Sign(horizontalInput) >= 0 ? 70f : 110f;
 
             // Calculate the grapple direction based on the movement direction and base angle
-            Vector2 grappleDirection = Quaternion.Euler(0f, 0f, baseGrappleAngle * direction) * Vector2.right;
+            Vector2 grappleDirection = Quaternion.Euler(0f, 0f, baseGrappleAngle) * Vector2.right;
 
             // Cast a ray in the grapple direction
             RaycastHit2D hit = Physics2D.Raycast(transform.position, grappleDirection, grappleLength, grappleLayer);
