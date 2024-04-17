@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundLayer;
     public Transform groundCheck;
     public float groundCheckRadius = 0.2f;
-    public ParticleSystem jetpackParticles; // Reference to the jetpack particle system
+    public TrailRenderer jetpackParticles; // Reference to the jetpack particle system
     private Rigidbody2D rb;
     private bool isGrounded;
     private float horizontalInput;
@@ -38,12 +38,12 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButton("Jump") && !isGrounded)
         {
             rb.AddForce(Vector2.up * jetpackForce, ForceMode2D.Force);
-            ActivateJetpackParticles(true); // Activate jetpack particles only once
+            //ActivateJetpackParticles(true); // Activate jetpack particles only once
             isJetpackActive = true;
         }
         else if (isJetpackActive)
         {
-            ActivateJetpackParticles(false); // Deactivate jetpack particles only once
+            //ActivateJetpackParticles(false); // Deactivate jetpack particles only once
             isJetpackActive = false;
         }
     }
@@ -61,28 +61,6 @@ public class PlayerMovement : MonoBehaviour
         else if (horizontalInput < 0)
         {
             transform.localScale = new Vector3(-1f, 1f, 1f);
-        }
-    }
-
-    // Method to activate or deactivate jetpack particles
-    void ActivateJetpackParticles(bool activate)
-    {
-        if (jetpackParticles != null)
-        {
-            if (activate)
-            {
-                if (!jetpackParticles.isPlaying)
-                {
-                    jetpackParticles.Play();
-                }
-            }
-            else
-            {
-                if (jetpackParticles.isPlaying)
-                {
-                    jetpackParticles.Stop();
-                }
-            }
         }
     }
 }
