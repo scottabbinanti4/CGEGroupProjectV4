@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 37880390}
   - component: {fileID: 37880392}
   - component: {fileID: 37880391}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,7 +241,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 396451205}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platforms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,6 +279,7 @@ GameObject:
   - component: {fileID: 520640354}
   - component: {fileID: 520640353}
   - component: {fileID: 520640352}
+  - component: {fileID: 520640355}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -321,7 +322,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 9.314714
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -351,6 +352,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &520640355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520640351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ddbb574e1ca59847a1f69035d291676, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 825898250}
 --- !u!1001 &573254880
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -408,6 +422,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9cd00c12114b0e4a9432cd5449613f7, type: 3}
+--- !u!1 &825898250 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6683036477850904694, guid: e9cd00c12114b0e4a9432cd5449613f7, type: 3}
+  m_PrefabInstance: {fileID: 573254880}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1459429257
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,7 +438,7 @@ GameObject:
   - component: {fileID: 1459429260}
   - component: {fileID: 1459429259}
   - component: {fileID: 1459429258}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -637,7 +656,7 @@ GameObject:
   - component: {fileID: 1546394352}
   - component: {fileID: 1546394354}
   - component: {fileID: 1546394353}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -746,7 +765,7 @@ GameObject:
   - component: {fileID: 1822195615}
   - component: {fileID: 1822195617}
   - component: {fileID: 1822195616}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -855,7 +874,7 @@ GameObject:
   - component: {fileID: 1859008543}
   - component: {fileID: 1859008545}
   - component: {fileID: 1859008544}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -964,7 +983,7 @@ GameObject:
   - component: {fileID: 1925460570}
   - component: {fileID: 1925460572}
   - component: {fileID: 1925460571}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
