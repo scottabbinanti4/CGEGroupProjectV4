@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class GhostRunner : MonoBehaviour
 {
-    [SerializedField] private Transform _recordTarget;
-    [SerializedField] private GameObject _ghostPrefab;
-    [SerializedField, Range(1, 10)] private int _captureEveryNFrames = 2;
+    [SerializeField] private Transform _recordTarget;
+    [SerializeField] private GameObject _ghostPrefab;
+    [SerializeField, Range(1, 10)] private int _captureEveryNFrames = 2;
 
     private ReplaySystem _system;
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 // ReSharper disable IteratorNeverReturns
 
-namespace GhostRunner
+namespace TarodevGhost
 {
     public class ReplaySystem
     {

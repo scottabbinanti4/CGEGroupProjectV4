@@ -1,8 +1,8 @@
-/*using System.Linq;
+using System.Linq;
 using System.Text;
 using UnityEngine;
 
-namespace GhostRunner
+namespace TarodevGhost
 {
     public class Recording
     {
@@ -115,4 +115,4 @@ namespace GhostRunner
 
         #endregion
     }
-}*/
+}
