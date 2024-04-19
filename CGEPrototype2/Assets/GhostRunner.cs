@@ -1,4 +1,4 @@
-/*using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,7 +21,7 @@ public class GhostRunner : MonoBehaviour
         {
             _system.StartRun(_recordTarget, _captureEveryNFrames);
             _system.PlayRecording(RecordingType.Best, Instantiate(_ghostPrefab));
-        } 
+        }
         else
         {
             _system.FinishRun();
@@ -30,4 +30,4 @@ public class GhostRunner : MonoBehaviour
 
     }
 
-}*/
+}

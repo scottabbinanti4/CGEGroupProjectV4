@@ -1,4 +1,4 @@
-/*using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 // ReSharper disable IteratorNeverReturns
@@ -182,4 +182,4 @@ namespace GhostRunner
         Best = 1,
         Saved = 2
     }
-}*/
+}
