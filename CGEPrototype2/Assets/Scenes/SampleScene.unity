@@ -668,6 +668,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6683036477850904653, guid: e9cd00c12114b0e4a9432cd5449613f7, type: 3}
+      propertyPath: jetpackForce
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683036477850904689, guid: e9cd00c12114b0e4a9432cd5449613f7, type: 3}
+      propertyPath: m_GravityScale
+      value: 1.7
+      objectReference: {fileID: 0}
     - target: {fileID: 6683036477850904690, guid: e9cd00c12114b0e4a9432cd5449613f7, type: 3}
       propertyPath: m_RootOrder
       value: 1
