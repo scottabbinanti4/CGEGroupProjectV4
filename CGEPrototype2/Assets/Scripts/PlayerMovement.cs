@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    float speedMultiplyer = 1f;
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
     public float jetpackForce = 20f;
@@ -24,6 +25,20 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.LogError("GroundCheck not assigned to the player controller!");
         }
+
+        Speeditem.OnSpeedCollected += StartSpeedBoost;
+    }
+
+    void StartSpeedBoost(float multiplyer)
+    {
+        StartCoroutine(SpeedBoostCoroutine(multiplyer));
+    }
+
+    private IEnumerator SpeedBoostCoroutine(float multiplyer)
+    {
+        speedMultiplyer = multiplyer;
+        yield return new WaitForSeconds(2f);
+        speedMultiplyer = 1f;
     }
 
     void Update()
@@ -50,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
+        rb.velocity = new Vector2(horizontalInput * moveSpeed * speedMultiplyer, rb.velocity.y);
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
