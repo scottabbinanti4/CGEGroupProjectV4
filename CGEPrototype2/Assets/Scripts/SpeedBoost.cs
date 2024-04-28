@@ -5,6 +5,7 @@ using System.Diagnostics.Contracts;
 using UnityEngine;
 
 public class SpeedBoost : MonoBehaviour
+
 {
     public static event Action<float> OnSpeedCollected;
     public float speedMultiplier = 1.5f;
@@ -13,6 +14,6 @@ public class SpeedBoost : MonoBehaviour
     public void Collect()
     {
         OnSpeedCollected.Invoke(speedMultiplier);
-        Destroy(gameobject);
+        Destroy(gameObject);
     }
 }

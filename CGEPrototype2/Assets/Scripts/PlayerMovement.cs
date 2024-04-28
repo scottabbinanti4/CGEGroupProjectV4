@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    float speedMultiplyer = 1f;
+    public float speedMultiplyer = 1f;
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
     public float jetpackForce = 20f;
@@ -26,15 +26,15 @@ public class PlayerMovement : MonoBehaviour
             Debug.LogError("GroundCheck not assigned to the player controller!");
         }
 
-        Speeditem.OnSpeedCollected += StartSpeedBoost;
+        SpeedBoost.OnSpeedCollected += StartSpeedBoost; //Speedboost
     }
-
+     //SpeedBoost
     void StartSpeedBoost(float multiplyer)
     {
         StartCoroutine(SpeedBoostCoroutine(multiplyer));
     }
 
-    private IEnumerator SpeedBoostCoroutine(float multiplyer)
+    private IEnumerator SpeedBoostCoroutine(float multiplyer) //Speedboost
     {
         speedMultiplyer = multiplyer;
         yield return new WaitForSeconds(2f);
