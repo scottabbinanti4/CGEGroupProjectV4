@@ -7,13 +7,29 @@ using UnityEngine;
 public class SpeedBoost : MonoBehaviour
 
 {
-    public static event Action<float> OnSpeedCollected;
+
     public float speedMultiplier = 1.5f;
+    public float speedBoostTime = 5f;
 
     // pick up item 
-    public void Collect()
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        OnSpeedCollected.Invoke(speedMultiplier);
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            PlayerMovement playerMovement = collision.gameObject.GetComponent<PlayerMovement>();
+
+            if (playerMovement == null) 
+            {
+                Debug.LogError("Playermovement not found on player");
+                    return;
+            }
+
+            playerMovement.StartSpeedBoost(speedMultiplier, speedBoostTime);
+        }
+
         Destroy(gameObject);
     }
+
 }

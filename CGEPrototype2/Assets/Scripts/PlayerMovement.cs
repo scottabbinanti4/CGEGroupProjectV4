@@ -26,18 +26,18 @@ public class PlayerMovement : MonoBehaviour
             Debug.LogError("GroundCheck not assigned to the player controller!");
         }
 
-        SpeedBoost.OnSpeedCollected += StartSpeedBoost; //Speedboost
     }
      //SpeedBoost
-    void StartSpeedBoost(float multiplyer)
-    {
-        StartCoroutine(SpeedBoostCoroutine(multiplyer));
-    }
-
-    private IEnumerator SpeedBoostCoroutine(float multiplyer) //Speedboost
+   public void StartSpeedBoost(float multiplyer, float speedBoostTime)
     {
         speedMultiplyer = multiplyer;
-        yield return new WaitForSeconds(2f);
+        StartCoroutine(SpeedBoostCoroutine(multiplyer, speedBoostTime));
+
+    }
+
+    private IEnumerator SpeedBoostCoroutine(float multiplyer, float speedBoostTime) //Speedboost
+    {
+        yield return new WaitForSeconds(speedBoostTime);
         speedMultiplyer = 1f;
     }
 
