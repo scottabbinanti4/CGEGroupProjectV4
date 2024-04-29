@@ -123,6 +123,24 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &18698327 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5653193137762953464, guid: 8e381ddc755296c4f8dbefdb23b6f456, type: 3}
+  m_PrefabInstance: {fileID: 1275300610}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &18698332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18698327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52d819f81f0715b4399b39c805b2144f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stopwatch: {fileID: 1234458599}
 --- !u!1 &21403064
 GameObject:
   m_ObjectHideFlags: 0
@@ -722,7 +740,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 15.834631
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4319,7 +4337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40622f5a1b5d6a34bb43432ac860a9d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTimeText: {fileID: 0}
+  currentTimeText: {fileID: 1085240639}
 --- !u!114 &1234458600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4349,10 +4367,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -4497,6 +4515,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 189192695932259868, guid: 8e381ddc755296c4f8dbefdb23b6f456, type: 3}
+      propertyPath: m_Size.x
+      value: 1.4667034
+      objectReference: {fileID: 0}
+    - target: {fileID: 189192695932259868, guid: 8e381ddc755296c4f8dbefdb23b6f456, type: 3}
+      propertyPath: m_Size.y
+      value: 13.149833
+      objectReference: {fileID: 0}
+    - target: {fileID: 189192695932259868, guid: 8e381ddc755296c4f8dbefdb23b6f456, type: 3}
+      propertyPath: m_Offset.x
+      value: -5.6005373
+      objectReference: {fileID: 0}
+    - target: {fileID: 189192695932259868, guid: 8e381ddc755296c4f8dbefdb23b6f456, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.10005331
+      objectReference: {fileID: 0}
     - target: {fileID: 5653193137762953464, guid: 8e381ddc755296c4f8dbefdb23b6f456, type: 3}
       propertyPath: m_Name
       value: LevelEnd
@@ -5687,6 +5721,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1751651681 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1979738153294695605, guid: c8e740e08f5e4b14b8f6901fec319bfd, type: 3}
+  m_PrefabInstance: {fileID: 264197225}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1751651686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751651681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d70e53e081beba643851d671d770ceb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stopwatch: {fileID: 1234458599}
 --- !u!1 &1797476648
 GameObject:
   m_ObjectHideFlags: 0
