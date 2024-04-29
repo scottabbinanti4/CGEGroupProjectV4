@@ -130,6 +130,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 189192695932259868, guid: 8e381ddc755296c4f8dbefdb23b6f456, type: 3}
+      propertyPath: m_Size.x
+      value: 6.878564
+      objectReference: {fileID: 0}
+    - target: {fileID: 189192695932259868, guid: 8e381ddc755296c4f8dbefdb23b6f456, type: 3}
+      propertyPath: m_Size.y
+      value: 12.799471
+      objectReference: {fileID: 0}
+    - target: {fileID: 189192695932259868, guid: 8e381ddc755296c4f8dbefdb23b6f456, type: 3}
+      propertyPath: m_Offset.x
+      value: -2.939282
+      objectReference: {fileID: 0}
+    - target: {fileID: 189192695932259868, guid: 8e381ddc755296c4f8dbefdb23b6f456, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.0000009536743
+      objectReference: {fileID: 0}
     - target: {fileID: 5653193137762953464, guid: 8e381ddc755296c4f8dbefdb23b6f456, type: 3}
       propertyPath: m_Name
       value: LevelEnd
@@ -580,7 +596,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6683036477850904653, guid: e9cd00c12114b0e4a9432cd5449613f7, type: 3}
       propertyPath: dashSpeed
-      value: 12.5
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6683036477850904653, guid: e9cd00c12114b0e4a9432cd5449613f7, type: 3}
       propertyPath: dashCooldown
@@ -592,7 +608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6683036477850904653, guid: e9cd00c12114b0e4a9432cd5449613f7, type: 3}
       propertyPath: jetpackForce
-      value: 0.6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6683036477850904690, guid: e9cd00c12114b0e4a9432cd5449613f7, type: 3}
       propertyPath: m_RootOrder
