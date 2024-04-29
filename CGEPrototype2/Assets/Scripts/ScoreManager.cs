@@ -3,44 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System.Diagnostics;
 
 public class ScoreManager : MonoBehaviour
 {
     public static bool gameOver;
     public static bool won;
 
-    public static int score;
-
     public TMP_Text textbox;
-    public int scoreToWin;
-
 
     // Start is called before the first frame update
     private void Start()
     {
         gameOver = false;
         won = false;
-
-        score = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (score >= scoreToWin)
-        {
-            won = true;
-
-            gameOver = true;
-        }
-
-
 
         if (gameOver)
         {
             if (won)
             {
-                textbox.text = "You win!\nPress R to Try Again";
+                textbox.text = "You win!\nPress R to Try Again to try for a faster Time!";
             }
             else
             {
@@ -52,4 +39,5 @@ public class ScoreManager : MonoBehaviour
             }
         }
     }
+
 }
