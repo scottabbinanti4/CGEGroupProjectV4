@@ -16,6 +16,13 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrounded;
     private float horizontalInput;
     private bool isJetpackActive; // Flag to track if jetpack is currently active
+    public float dashSpeed = 10f;
+    public float dashDuration = 0.5f;
+    public float dashCooldown = 1f;
+    public bool canDash = true;
+    private Vector2 preDashVelocity; // Store the player's velocity before the dash
+
+
 
     void Start()
     {
@@ -61,6 +68,13 @@ public class PlayerMovement : MonoBehaviour
             //ActivateJetpackParticles(false); // Deactivate jetpack particles only once
             isJetpackActive = false;
         }
+        if (canDash && Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            StartCoroutine(Dash());
+            //Debug.Log("Shift key pressed, starting dash...");
+        }
+
+
     }
 
     void FixedUpdate()
@@ -77,5 +91,35 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.localScale = new Vector3(-1f, 1f, 1f);
         }
+    }
+
+    IEnumerator Dash()
+    {
+        canDash = false;
+
+        // Store the player's velocity before the dash
+        Vector2 preDashVelocity = rb.velocity;
+
+        // Calculate dash direction based on player's current velocity
+        Vector2 dashDir = rb.velocity.normalized;
+
+        // Calculate displacement for the dash
+        Vector2 displacement = dashDir * dashSpeed * dashDuration;
+
+        float startTime = Time.time;
+        while (Time.time < startTime + dashDuration)
+        {
+            // Apply displacement to the player's position over time
+            transform.Translate(displacement * Time.deltaTime / dashDuration, Space.World);
+
+            // Maintain player's velocity to preserve momentum
+            rb.velocity = preDashVelocity;
+
+            yield return null;
+        }
+
+        // Cooldown before next dash is allowed
+        yield return new WaitForSeconds(dashCooldown);
+        canDash = true;
     }
 }
