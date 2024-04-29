@@ -5441,8 +5441,12 @@ PrefabInstance:
       value: 12.5
       objectReference: {fileID: 0}
     - target: {fileID: 6683036477850904653, guid: e9cd00c12114b0e4a9432cd5449613f7, type: 3}
+      propertyPath: dashCooldown
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683036477850904653, guid: e9cd00c12114b0e4a9432cd5449613f7, type: 3}
       propertyPath: jetpackForce
-      value: 2
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 6683036477850904689, guid: e9cd00c12114b0e4a9432cd5449613f7, type: 3}
       propertyPath: m_GravityScale

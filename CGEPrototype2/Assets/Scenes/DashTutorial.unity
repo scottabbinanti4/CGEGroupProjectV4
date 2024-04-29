@@ -340,6 +340,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6683036477850904653, guid: e9cd00c12114b0e4a9432cd5449613f7, type: 3}
+      propertyPath: dashSpeed
+      value: 12.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683036477850904653, guid: e9cd00c12114b0e4a9432cd5449613f7, type: 3}
+      propertyPath: jetpackForce
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 6683036477850904690, guid: e9cd00c12114b0e4a9432cd5449613f7, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1159,7 +1167,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 9.816257
+  orthographic size: 27.564198
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
