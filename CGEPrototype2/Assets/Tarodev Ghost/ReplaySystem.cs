@@ -1,34 +1,27 @@
-/*using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 // ReSharper disable IteratorNeverReturns
 
-namespace TarodevGhost
-{
-    public class ReplaySystem
-    {
+namespace TarodevGhost {
+    public class ReplaySystem {
         private readonly WaitForFixedUpdate _wait = new WaitForFixedUpdate();
 
-        public ReplaySystem(MonoBehaviour runner)
-        {
+        public ReplaySystem(MonoBehaviour runner) {
             runner.StartCoroutine(FixedUpdate());
             runner.StartCoroutine(Update());
         }
 
-        private IEnumerator FixedUpdate()
-        {
-            while (true)
-            {
+        private IEnumerator FixedUpdate() {
+            while (true) {
                 yield return _wait;
                 AddSnapshot();
                 _elapsedRecordingTime += Time.smoothDeltaTime;
             }
         }
 
-        private IEnumerator Update()
-        {
-            while (true)
-            {
+        private IEnumerator Update() {
+            while (true) {
                 yield return null;
                 _replaySmoothedTime += Time.smoothDeltaTime;
                 UpdateReplay();
@@ -50,8 +43,7 @@ namespace TarodevGhost
         /// <param name="target">The transform you wish to record</param>
         /// <param name="snapshotEveryNFrames">The accuracy of the recording. Smaller number == higher file size</param>
         /// <param name="maxRecordingTimeLimit">Stop recording beyond this time</param>
-        public void StartRun(Transform target, int snapshotEveryNFrames = 2, float maxRecordingTimeLimit = 60)
-        {
+        public void StartRun(Transform target, int snapshotEveryNFrames = 2, float maxRecordingTimeLimit = 60) {
             _currentRun = new Recording(target);
 
             _elapsedRecordingTime = 0;
@@ -62,8 +54,7 @@ namespace TarodevGhost
             _maxRecordingTimeLimit = maxRecordingTimeLimit;
         }
 
-        private void AddSnapshot()
-        {
+        private void AddSnapshot() {
             if (_currentRun == null) return;
 
             // Capture frame, taking into account the frame skip
@@ -78,11 +69,9 @@ namespace TarodevGhost
         /// </summary>
         /// <param name="save">If we want to save this run. Use false for restarts</param>
         /// <returns>Whether this run was the fastest so far</returns>
-        public bool FinishRun(bool save = true)
-        {
+        public bool FinishRun(bool save = true) {
             if (_currentRun == null) return false;
-            if (!save)
-            {
+            if (!save) {
                 _currentRun = null;
                 return false;
             }
@@ -90,8 +79,7 @@ namespace TarodevGhost
             _runs[RecordingType.Last] = _currentRun;
             _currentRun = null;
 
-            if (!GetRun(RecordingType.Best, out var best) || _runs[RecordingType.Last].Duration <= best.Duration)
-            {
+            if (!GetRun(RecordingType.Best, out var best) || _runs[RecordingType.Last].Duration <= best.Duration) {
                 _runs[RecordingType.Best] = _runs[RecordingType.Last];
                 return true;
             }
@@ -111,8 +99,7 @@ namespace TarodevGhost
         /// <param name="type">The type of run you'd like to retrieve</param>
         /// <param name="run">The resulting run</param>
         /// <returns></returns>
-        public bool GetRun(RecordingType type, out Recording run)
-        {
+        public bool GetRun(RecordingType type, out Recording run) {
             return _runs.TryGetValue(type, out run);
         }
 
@@ -131,12 +118,10 @@ namespace TarodevGhost
         /// <param name="type">The type of recording you wish to play</param>
         /// <param name="ghostObj">The visual representation of the ghost. Must be pre-instantiated (this allows customization)</param>
         /// <param name="destroyOnCompletion">Whether or not to automatically destroy the ghost object when the run completes</param>
-        public void PlayRecording(RecordingType type, GameObject ghostObj, bool destroyOnCompletion = true)
-        {
+        public void PlayRecording(RecordingType type, GameObject ghostObj, bool destroyOnCompletion = true) {
             if (_ghostObj != null) Object.Destroy(_ghostObj);
 
-            if (!GetRun(type, out _currentReplay))
-            {
+            if (!GetRun(type, out _currentReplay)) {
                 Object.Destroy(ghostObj);
                 return;
             }
@@ -148,8 +133,7 @@ namespace TarodevGhost
             else if (_destroyOnComplete) Object.Destroy(_ghostObj);
         }
 
-        private void UpdateReplay()
-        {
+        private void UpdateReplay() {
             if (_currentReplay == null) return;
 
             // Evaluate the point at the current time
@@ -157,8 +141,7 @@ namespace TarodevGhost
             _ghostObj.transform.SetPositionAndRotation(pose.position, pose.rotation);
 
             // Destroy the replay when done
-            if (_replaySmoothedTime > _currentReplay.Duration)
-            {
+            if (_replaySmoothedTime > _currentReplay.Duration) {
                 _currentReplay = null;
                 if (_destroyOnComplete) Object.Destroy(_ghostObj);
             }
@@ -167,8 +150,7 @@ namespace TarodevGhost
         /// <summary>
         /// Stop the replay. Should be called when the player finishes the run before the ghost
         /// </summary>
-        public void StopReplay()
-        {
+        public void StopReplay() {
             if (_ghostObj != null) Object.Destroy(_ghostObj);
             _currentReplay = null;
         }
@@ -176,10 +158,9 @@ namespace TarodevGhost
         #endregion
     }
 
-    public enum RecordingType
-    {
+    public enum RecordingType {
         Last = 0,
         Best = 1,
         Saved = 2
     }
-}*/
+}
