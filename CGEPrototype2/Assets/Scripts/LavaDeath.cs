@@ -14,6 +14,7 @@ public class LavaDeath : MonoBehaviour
         {
             output.text = textToDisplay;
             ScoreManager.gameOver = true;
+            collision.gameObject.SetActive(false);
         }
     }
 }
