@@ -1,6 +1,7 @@
 /*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class GhostRunner : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class GhostRunner : MonoBehaviour
 
     private void OnFinishLineCrossed(bool runStarting)
     {
-        if (runStartgin)
+        if (runStarting)
         {
             _system.StartRun(_recordTarget, _captureEveryNFrames, _captureEveryNFrames);
             _system.PlayRecording(RecordingType.Best, Instantiate(_ghostPrefab));
