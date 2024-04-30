@@ -16,10 +16,5 @@ public class StartCollider : MonoBehaviour
             stopwatch.StartStopwatch();
         }
 
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            
-        }
-
     }
 }
