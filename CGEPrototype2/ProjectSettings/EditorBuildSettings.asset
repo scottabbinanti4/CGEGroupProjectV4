@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Speedboost tutorial 1.unity
     guid: 71370034b25348a4f837d9de4cb51a1d
+  - enabled: 1
+    path: Assets/Scenes/Leaderboard.unity
+    guid: 3c3391e85be5c7348b53957ef84f39d8
   m_configObjects: {}
