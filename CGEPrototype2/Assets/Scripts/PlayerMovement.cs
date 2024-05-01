@@ -122,4 +122,15 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
     }
+    public void LockPlayerMovement()
+    {
+        rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+    }
+
+    // Method to unlock player movement
+    public void UnlockPlayerMovement()
+    {
+        rb.constraints = ~RigidbodyConstraints2D.FreezePositionX
+        rb.constraintws = ~RigidbodyConstraints2D.FreezePositionY;
+    }
 }
