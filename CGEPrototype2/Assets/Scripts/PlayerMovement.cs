@@ -130,7 +130,7 @@ public class PlayerMovement : MonoBehaviour
     // Method to unlock player movement
     public void UnlockPlayerMovement()
     {
-        rb.constraints = ~RigidbodyConstraints2D.FreezePositionX
-        rb.constraintws = ~RigidbodyConstraints2D.FreezePositionY;
+        //rb.constraints = ~RigidbodyConstraints2D.FreezePositionX;
+        //rb.constraintws = ~RigidbodyConstraints2D.FreezePositionY;
     }
 }
