@@ -29,7 +29,6 @@ public class SpeedBoost : MonoBehaviour
             playerMovement.StartSpeedBoost(speedMultiplier, speedBoostTime);
         }
 
-        Destroy(gameObject);
     }
 
 }
