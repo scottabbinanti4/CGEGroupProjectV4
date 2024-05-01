@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainLevel4(real).unity
     guid: 2182d2571bec2da4082f9ee41737f69f
+  - enabled: 1
+    path: Assets/Scenes/Speedboost tutorial 1.unity
+    guid: 71370034b25348a4f837d9de4cb51a1d
   m_configObjects: {}

@@ -767,6 +767,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   output: {fileID: 2048967199}
   textToDisplay: You Lose!
+  stopwatch: {fileID: 0}
 --- !u!1 &1220387268
 GameObject:
   m_ObjectHideFlags: 0
@@ -1451,6 +1452,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stopwatch: {fileID: 1335680794}
+--- !u!114 &1634558942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634558940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da357b550b6f21341820cdc57515d6cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextSceneIndex: 4
 --- !u!1 &1936196957
 GameObject:
   m_ObjectHideFlags: 0
@@ -1589,8 +1603,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9bd227d0edcf4740953fbf1e50dc080, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startPosition: {fileID: 0}
+  player: {fileID: 0}
   textbox: {fileID: 2048967199}
-  scoreToWin: 1
 --- !u!4 &1993625952
 Transform:
   m_ObjectHideFlags: 0
