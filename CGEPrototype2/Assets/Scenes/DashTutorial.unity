@@ -1272,6 +1272,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1126023169394587094, guid: fa6158178a1a2a04b84b8059e874563c, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1126023169394587094, guid: fa6158178a1a2a04b84b8059e874563c, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 1126023169394587094, guid: fa6158178a1a2a04b84b8059e874563c, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 1126023170243061052, guid: fa6158178a1a2a04b84b8059e874563c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -10472,7 +10484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da357b550b6f21341820cdc57515d6cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneIndex: 4
+  nextSceneIndex: 3
 --- !u!1 &1761220963
 GameObject:
   m_ObjectHideFlags: 0
@@ -11202,7 +11214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1176577781868262128, guid: 02fdc99c63fbb424e95fda417c13bcd5, type: 3}
       propertyPath: jetpackForce
-      value: 2
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02fdc99c63fbb424e95fda417c13bcd5, type: 3}
