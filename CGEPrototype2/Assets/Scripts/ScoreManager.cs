@@ -10,6 +10,8 @@ public class ScoreManager : MonoBehaviour
     public static bool gameOver;
     public static bool won;
 
+    public StopWatch stopwatch;
+
     public GameObject startPosition;
 
     public GameObject player;
@@ -37,13 +39,14 @@ public class ScoreManager : MonoBehaviour
             {
                 textbox.text = "You Lose!\nPress S to reset";
             }
-            if (Input.GetKeyDown(KeyCode.R))
+            if (Input.GetKeyDown(KeyCode.R) && won)
             {
                 Reset();
             }
-            if (Input.GetKeyDown (KeyCode.S))
+            if (Input.GetKeyDown (KeyCode.S) && !won)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
             }
         }
     }
@@ -55,6 +58,7 @@ public class ScoreManager : MonoBehaviour
         gameOver = false;
         textbox.text = "";
         //reset timer
+        stopwatch.ResetTime();
         //reset speed
     }
 }

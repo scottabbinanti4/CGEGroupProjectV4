@@ -44,4 +44,9 @@ public class StopWatch : MonoBehaviour
     {
         stopwatchActive = false;
     }
+
+    public void ResetTime()
+    {
+        currentTime = 0;
+    }
 }
