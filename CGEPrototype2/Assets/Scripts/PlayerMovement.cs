@@ -21,12 +21,17 @@ public class PlayerMovement : MonoBehaviour
     public float dashCooldown = 1f;
     public bool canDash = true;
     private Vector2 preDashVelocity; // Store the player's velocity before the dash
+    private bool isLocked = false;
+
+    private RigidbodyConstraints2D originalConstraints;
 
 
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        originalConstraints = rb.constraints;
 
         if (groundCheck == null)
         {
@@ -50,47 +55,52 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
-
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (!isLocked)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-        }
+                horizontalInput = Input.GetAxis("Horizontal");
 
-        if (Input.GetButton("Jump") && !isGrounded)
-        {
-            rb.AddForce(Vector2.up * jetpackForce, ForceMode2D.Force);
-            //ActivateJetpackParticles(true); // Activate jetpack particles only once
-            isJetpackActive = true;
-        }
-        else if (isJetpackActive)
-        {
-            //ActivateJetpackParticles(false); // Deactivate jetpack particles only once
-            isJetpackActive = false;
-        }
-        if (canDash && Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            StartCoroutine(Dash());
-            //Debug.Log("Shift key pressed, starting dash...");
-        }
+            if (Input.GetButtonDown("Jump") && isGrounded)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            }
 
-
+            if (Input.GetButton("Jump") && !isGrounded)
+            {
+                rb.AddForce(Vector2.up * jetpackForce, ForceMode2D.Force);
+                //ActivateJetpackParticles(true); // Activate jetpack particles only once
+                isJetpackActive = true;
+            }
+            else if (isJetpackActive)
+            {
+                //ActivateJetpackParticles(false); // Deactivate jetpack particles only once
+                isJetpackActive = false;
+            }
+            if (canDash && Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                StartCoroutine(Dash());
+                //Debug.Log("Shift key pressed, starting dash...");
+            }
+        }
     }
 
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(horizontalInput * moveSpeed * speedMultiplyer, rb.velocity.y);
-
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-
-        if (horizontalInput > 0)
+        if (!isLocked)
         {
-            transform.localScale = new Vector3(1f, 1f, 1f);
+            rb.velocity = new Vector2(horizontalInput * moveSpeed * speedMultiplyer, rb.velocity.y);
+
+            isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+
+            if (horizontalInput > 0)
+            {
+                transform.localScale = new Vector3(1f, 1f, 1f);
+            }
+            else if (horizontalInput < 0)
+            {
+                transform.localScale = new Vector3(-1f, 1f, 1f);
+            }
         }
-        else if (horizontalInput < 0)
-        {
-            transform.localScale = new Vector3(-1f, 1f, 1f);
-        }
+        
     }
 
     IEnumerator Dash()
@@ -124,13 +134,14 @@ public class PlayerMovement : MonoBehaviour
     }
     public void LockPlayerMovement()
     {
+        // Freeze the position constraints on the Rigidbody2D to lock movement
         rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
     }
 
     // Method to unlock player movement
     public void UnlockPlayerMovement()
     {
-        //rb.constraints = ~RigidbodyConstraints2D.FreezePositionX;
-        //rb.constraintws = ~RigidbodyConstraints2D.FreezePositionY;
+        // Preserve the rotation constraints
+        rb.constraints = originalConstraints & ~RigidbodyConstraints2D.FreezePositionX & ~RigidbodyConstraints2D.FreezePositionY;
     }
 }
