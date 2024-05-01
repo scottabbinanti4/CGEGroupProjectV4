@@ -6,8 +6,14 @@ public class StopCollider : MonoBehaviour
 {
 
     public StopWatch stopwatch;
-    public RaceManager raceManager;
+    //public RaceManager raceManager;
+    //public PlayerMovement PlayerMovement;
+    //public GameObject player;
 
+    private void Start()
+    {
+        //PlayerMovement = player.GetComponent<PlayerMovement>();    
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -15,7 +21,8 @@ public class StopCollider : MonoBehaviour
             stopwatch.StopStopwatch();
             ScoreManager.gameOver = true;
             ScoreManager.won = true;
-            raceManager.FinishRace();
+            //raceManager.FinishRace();
+            //PlayerMovement.LockPlayerMovement();
         }
 
     }
