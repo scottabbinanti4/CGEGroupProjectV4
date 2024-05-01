@@ -10,6 +10,10 @@ public class ScoreManager : MonoBehaviour
     public static bool gameOver;
     public static bool won;
 
+    public GameObject startPosition;
+
+    public GameObject player;
+
     public TMP_Text textbox;
 
     // Start is called before the first frame update
@@ -31,13 +35,26 @@ public class ScoreManager : MonoBehaviour
             }
             else
             {
-                textbox.text = "You Lose!\nPress R to Try Again";
+                textbox.text = "You Lose!\nPress S to reset";
             }
             if (Input.GetKeyDown(KeyCode.R))
+            {
+                Reset();
+            }
+            if (Input.GetKeyDown (KeyCode.S))
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
     }
 
+    public void Reset()
+    {
+        //reset the players position
+        player.transform.position = startPosition.transform.position;
+        gameOver = false;
+        textbox.text = "";
+        //reset timer
+        //reset speed
+    }
 }
