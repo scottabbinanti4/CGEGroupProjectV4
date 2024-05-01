@@ -837,7 +837,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   output: {fileID: 2048967199}
   textToDisplay: You Lose!
-  stopwatch: {fileID: 0}
+  stopwatch: {fileID: 1335680794}
 --- !u!1 &1220387268
 GameObject:
   m_ObjectHideFlags: 0
@@ -10460,20 +10460,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5653193137762953464, guid: 8e381ddc755296c4f8dbefdb23b6f456, type: 3}
   m_PrefabInstance: {fileID: 1634558939}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1634558941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1634558940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52d819f81f0715b4399b39c805b2144f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stopwatch: {fileID: 1335680794}
-  raceManager: {fileID: 0}
 --- !u!114 &1634558942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10584,7 +10570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10885,6 +10871,7 @@ MonoBehaviour:
   startPosition: {fileID: 0}
   player: {fileID: 714765581}
   textbox: {fileID: 2048967199}
+  PlayerMovement: {fileID: 0}
 --- !u!4 &1993625952
 Transform:
   m_ObjectHideFlags: 0
@@ -11215,7 +11202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1176577781868262128, guid: 02fdc99c63fbb424e95fda417c13bcd5, type: 3}
       propertyPath: jetpackForce
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02fdc99c63fbb424e95fda417c13bcd5, type: 3}

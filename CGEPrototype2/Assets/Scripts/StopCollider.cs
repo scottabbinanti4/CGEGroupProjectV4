@@ -6,9 +6,9 @@ public class StopCollider : MonoBehaviour
 {
 
     public StopWatch stopwatch;
-    //public RaceManager raceManager;
-    //public PlayerMovement PlayerMovement;
-    //public GameObject player;
+    public RaceManager raceManager;
+    public PlayerMovement PlayerMovement;
+    public GameObject player;
 
     private void Start()
     {
@@ -21,8 +21,8 @@ public class StopCollider : MonoBehaviour
             stopwatch.StopStopwatch();
             ScoreManager.gameOver = true;
             ScoreManager.won = true;
-            //raceManager.FinishRace();
-            //PlayerMovement.LockPlayerMovement();
+            raceManager.FinishRace();
+            PlayerMovement.LockPlayerMovement();
         }
 
     }

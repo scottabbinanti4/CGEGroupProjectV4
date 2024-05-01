@@ -65,7 +65,6 @@ public class RaceManager : MonoBehaviour
         SetTime4(temp);
         temp = GetTime2();
         SetTime3(temp);
-        
         temp = GetTime1();
         SetTime2(temp);
         SetTime1(raceTime);

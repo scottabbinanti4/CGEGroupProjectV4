@@ -17,6 +17,8 @@ public class ScoreManager : MonoBehaviour
     public GameObject player;
 
     public TMP_Text textbox;
+    public PlayerMovement PlayerMovement;
+   
 
     // Start is called before the first frame update
     private void Start()
@@ -59,6 +61,8 @@ public class ScoreManager : MonoBehaviour
         textbox.text = "";
         //reset timer
         stopwatch.ResetTime();
+        PlayerMovement.UnlockPlayerMovement();
+        won = false;
         //reset speed
     }
 }

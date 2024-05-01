@@ -145,13 +145,15 @@ public class PlayerMovement : MonoBehaviour
     public void LockPlayerMovement()
     {
         // Freeze the position constraints on the Rigidbody2D to lock movement
-        rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+        //rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+        Time.timeScale = 0;
     }
 
     // Method to unlock player movement
     public void UnlockPlayerMovement()
     {
         // Preserve the rotation constraints
-        rb.constraints = originalConstraints & ~RigidbodyConstraints2D.FreezePositionX & ~RigidbodyConstraints2D.FreezePositionY;
+        //rb.constraints = originalConstraints & ~RigidbodyConstraints2D.FreezePositionX & ~RigidbodyConstraints2D.FreezePositionY;
+        Time.timeScale = 1;
     }
 }
