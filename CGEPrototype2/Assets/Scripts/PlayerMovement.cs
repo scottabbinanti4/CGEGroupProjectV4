@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 preDashVelocity; // Store the player's velocity before the dash
     private bool isLocked = false;
 
+    private Animator animator;
+
     private RigidbodyConstraints2D originalConstraints;
 
 
@@ -30,6 +32,8 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        animator = GetComponent<Animator>();
 
         originalConstraints = rb.constraints;
 
@@ -89,7 +93,13 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(horizontalInput * moveSpeed * speedMultiplyer, rb.velocity.y);
 
+            animator.SetFloat("xVelocityAbs", Mathf.Abs(rb.velocity.x));
+
+            animator.SetFloat("yVelocity", rb.velocity.y);
+
             isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+
+            animator.SetBool("onGround", isGrounded);
 
             if (horizontalInput > 0)
             {
