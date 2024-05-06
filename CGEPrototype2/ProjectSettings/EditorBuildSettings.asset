@@ -8,24 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: accb545e6ba580b4a95c3335a477aa36
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/JetpackTutorial.unity
     guid: dfbc40d82b854454583a2448f9f1536a
   - enabled: 1
     path: Assets/Scenes/DashTutorial.unity
     guid: c32a97ec6e95de347957789ca4d7c88d
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: Assets/Scenes/Main Level.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
-    path: Assets/Scenes/MainLevel2.unity
-    guid: a7d91868137f5e9468d6b1427cee2e49
   - enabled: 1
     path: Assets/Scenes/Speedboost tutorial 1.unity
     guid: 71370034b25348a4f837d9de4cb51a1d
