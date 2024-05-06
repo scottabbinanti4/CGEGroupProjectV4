@@ -70,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (Input.GetButton("Jump") && !isGrounded)
             {
-                rb.AddForce(Vector2.up * jetpackForce, ForceMode2D.Force);
+                rb.velocity = new Vector2(rb.velocity.x, jetpackForce);
                 //ActivateJetpackParticles(true); // Activate jetpack particles only once
                 isJetpackActive = true;
             }
