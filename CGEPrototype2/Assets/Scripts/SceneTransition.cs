@@ -9,8 +9,11 @@ public class SceneTransition : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Collided");
         if (collision.gameObject.CompareTag("Player"))
         {
+            Debug.Log("Collided with player");
+            Debug.Log("next Scene Index =" + nextSceneIndex.ToString());
             SceneManager.LoadScene(nextSceneIndex);
         }
     }
