@@ -146,7 +146,7 @@ public class RaceManager : MonoBehaviour
     }
     public void UpdateBestTimeUI()
     {
-        bestTimeText.text = "Best Time: " + bestTime.ToString();
+        bestTimeText.text = "Best Time: " + FormatTime(bestTime);
     }
 
     public void ResetBestTime()
