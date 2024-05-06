@@ -13,7 +13,7 @@ public class SceneTransition : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("Collided with player");
-            Debug.Log("next Scene Index =" + nextSceneIndex.ToString());
+            Debug.Log("next Scene Index = " + nextSceneIndex.ToString());
             SceneManager.LoadScene(nextSceneIndex);
         }
     }
